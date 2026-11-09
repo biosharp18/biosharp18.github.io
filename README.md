@@ -53,16 +53,35 @@ When editing this checkout locally, commit your changes and push them to
 
 ## Preview locally
 
-Install Ruby 3.3 and Bundler, then run these commands in the repository:
+From the repository, run:
 
 ```sh
-bundle install
-bundle exec jekyll serve
+./scripts/preview
 ```
 
-Open <http://localhost:4000>. Restart the server after changing `_config.yml`.
-The `github-pages` dependency matches GitHub Pages' built-in Jekyll and plugin
-versions. To check a build without running a server:
+Open <http://localhost:4000>. Leave the command running while you edit. Saving
+a file rebuilds the preview; refresh your browser to see the result. Press
+**Ctrl+C** to stop it. Restart it after changing `_config.yml`.
+
+This checkout has a local Ruby installation in `vendor/ruby`, which the script
+uses automatically. The `vendor/` folder is ignored by Git. On a different
+computer, install Ruby 3.3 and Bundler first; the script will install the site's
+dependencies when needed. The `github-pages` dependency matches GitHub Pages'
+built-in Jekyll and plugin versions.
+
+If you are editing on a remote server, forward port **4000** to your computer.
+In VS Code Remote, use the **Ports** panel to forward it. Alternatively, run this
+in a separate terminal on your own computer, using your usual SSH destination:
+
+```sh
+ssh -N -L 4000:127.0.0.1:4000 your-user@your-server
+```
+
+Then open <http://localhost:4000> on your computer. The preview is private to the
+server and your SSH connection; it does not publish any edits to GitHub.
+
+To check a build without running a server, in a terminal with Ruby and Bundler
+available:
 
 ```sh
 bundle exec jekyll build --strict_front_matter
