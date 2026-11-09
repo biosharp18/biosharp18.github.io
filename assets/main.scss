@@ -1,0 +1,68 @@
+---
+---
+
+// Researcher's original theme styles, followed by small site-specific fixes.
+@import "style";
+
+body {
+  font-family: "Inconsolata", monospace;
+  line-height: 1.5;
+  color: #272727;
+}
+
+.navbar::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.content {
+  overflow-wrap: break-word;
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  pre {
+    padding: 1rem;
+    overflow-x: auto;
+    background: #f6f6f6;
+  }
+
+  code {
+    font-family: inherit;
+  }
+
+  .post-list {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.post-date {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.theme-footer {
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+  a {
+    color: #272727;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  padding: 0.5rem;
+  background: white;
+
+  &:focus {
+    top: 0;
+  }
+}

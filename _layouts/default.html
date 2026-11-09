@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="wrapper">
+    <header class="navbar container">
+      <a id="author-name" class="alignable pull-left" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+      <nav aria-label="Main navigation">
+        <ul id="navlist" class="alignable pull-right navbar-ul">
+          {% for item in site.nav %}
+            {% if item.link contains '://' or item.link contains 'mailto:' %}
+              {% assign nav_url = item.link %}
+            {% else %}
+              {% assign nav_url = item.link | relative_url %}
+            {% endif %}
+            <li class="alignable pull-left nav-list">
+              <a href="{{ nav_url | escape }}"{% if page.url == item.link %} aria-current="page"{% endif %}>{{ item.name | escape }}</a>
+              {% unless forloop.last %}<span aria-hidden="true"> / </span>{% endunless %}
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    <hr>
+    <main id="main-content" class="container content">
+      {{ content }}
+    </main>
+    {% if site.footer %}
+      <footer class="container theme-footer">
+        <hr>
+        <p><small><a href="{{ site.footer_url | escape }}">{{ site.footer_text | escape }}</a></small></p>
+      </footer>
+    {% endif %}
+  </div>
+</body>
+</html>
