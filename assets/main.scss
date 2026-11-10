@@ -20,7 +20,19 @@ body {
   overflow-wrap: break-word;
 
   h1 {
+    clear: both;
     font-size: 1.5rem;
+  }
+
+  .profile-picture {
+    display: block;
+    object-fit: cover;
+    margin: 0 0 1rem 1.5rem;
+
+    @media (max-width: $small-width) {
+      float: none;
+      margin: 0 auto 1rem;
+    }
   }
 
   pre {
