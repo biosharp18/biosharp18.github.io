@@ -13,8 +13,8 @@ Previously, I did my undergrad in Engineering at the University of Toronto.
 
 
 # Publications
-1. **Your paper title**  
-   **Your Name**, Coauthor Name.  
-   *Conference or Journal*, 2026.  
+1. **Efficient and Accurate Zero Shot Generation of Symmetric Protein Complexes**  
+   **Rory Gao**, Yuanzhou Chen, Prajit Rajkumar, Wei Wang.  
+   *40th Conference on Neural Information Processing Systems*, 2026.  
    [Paper](https://example.com/paper) · [Code](https://github.com/username/project)
 

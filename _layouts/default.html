@@ -42,5 +42,11 @@
       </footer>
     {% endif %}
   </div>
+  {% if jekyll.environment == 'production' %}
+    <!-- Count visits without displaying the MapMyVisitors map. -->
+    <div style="display: none !important;">
+      <script id="mapmyvisitors" async src="https://mapmyvisitors.com/map.js?d=KVSpO0iiUMj5L841NbQolZ155dqKPN25L_TGClUx3do&amp;cl=ffffff&amp;w=a"></script>
+    </div>
+  {% endif %}
 </body>
 </html>
