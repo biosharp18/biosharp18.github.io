@@ -19,6 +19,8 @@ plugins:
 nav:
   - name: GitHub
     link: https://github.com/biosharp18
+  - name: Email
+    link: /assets/email.png
 
 # Repository documentation is not part of the public website.
 exclude:
