@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
-  {% feed_meta %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;display=swap" rel="stylesheet">
@@ -35,12 +34,6 @@
     <main id="main-content" class="container content">
       {{ content }}
     </main>
-    {% if site.footer %}
-      <footer class="container theme-footer">
-        <hr>
-        <p><small><a href="{{ site.footer_url | escape }}">{{ site.footer_text | escape }}</a></small></p>
-      </footer>
-    {% endif %}
   </div>
   {% if jekyll.environment == 'production' %}
     <!-- Count visits without displaying the MapMyVisitors map. -->

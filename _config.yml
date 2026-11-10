@@ -1,7 +1,7 @@
 # Your site's name, introduction, and public address.
 title: biosharp18
 author: biosharp18
-description: "Hello world!"
+description: "Computer Science PhD student at UCLA working on protein structure prediction and generation."
 url: "https://biosharp18.github.io"
 baseurl: ""
 timezone: Etc/UTC
@@ -13,21 +13,12 @@ sass:
   style: compressed
 
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
 
 # Header links. Add a Resume link here after uploading your own PDF.
 nav:
-  - name: Home
-    link: /
-  - name: About
-    link: /about/
   - name: GitHub
     link: https://github.com/biosharp18
-
-footer: true
-footer_url: "https://github.com/ankitsultana/researcher"
-footer_text: "Researcher theme by Ankit Sultana"
 
 # Repository documentation is not part of the public website.
 exclude:
@@ -36,3 +27,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - scripts

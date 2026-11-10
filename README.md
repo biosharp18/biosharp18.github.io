@@ -9,30 +9,19 @@ with Jekyll. GitHub Pages publishes the root folder of the `main` branch.
 
 | What you want to change | File |
 | --- | --- |
-| Homepage introduction | `index.markdown` |
-| About page | `about.markdown` |
+| Homepage introduction and publications | `index.markdown` |
+| Profile photo | `assets/pic.JPEG` |
 | Site name, description, and navigation links | `_config.yml` |
-| Blog posts | `_posts/` |
-| Link color and page width | `_sass/vars.scss` |
+| Link color, photo size, and page width | `_sass/vars.scss` |
 | Additional styling | `assets/main.scss` |
 
 Keep the settings between the `---` lines at the top of each page. Edit the
 text underneath using Markdown: `# Heading`, `**bold text**`, and
 `[link text](https://example.com)`.
 
-The existing "Welcome to Jekyll!" post is an example. You can edit it, remove it,
-or add posts named `YYYY-MM-DD-your-title.markdown`. New posts need a header like:
-
-```yaml
----
-layout: post
-title: "My first post"
-date: 2026-11-09
----
-```
-
-The homepage automatically lists published posts. If there are no posts, the
-Posts section disappears.
+The site is a single-page research profile. Add publications to the numbered
+list in `index.markdown`, including paper or code links when they are available.
+The site title links back to the homepage, and the header links to GitHub.
 
 To add a resume, upload your own PDF to `assets/resume.pdf`, then add a link
 under `nav` in `_config.yml`:
@@ -87,6 +76,17 @@ available:
 bundle exec jekyll build --strict_front_matter
 ```
 
+## Visitor analytics
+
+MapMyVisitors is included in `_layouts/default.html`, so visits to every page
+using the shared layout can be counted. Its script is inside a hidden container:
+the map does not appear on the website, but you can view statistics through
+your MapMyVisitors account.
+
+The widget loads only in production builds, including GitHub Pages. Normal
+local previews do not load it or add preview visits to your statistics. Commit
+and push changes to the layout to publish them.
+
 ## Theme source and license
 
 Researcher was created by Ankit Sultana. The styles in `_sass/` were copied
@@ -94,9 +94,10 @@ from the upstream `gh-pages` branch at commit
 `6e8d54c936da772028b5871e3626d070e17d3b3a`.
 
 The layout in `_layouts/default.html` adapts Researcher's structure with working
-home and stylesheet links, Jekyll SEO/feed metadata, and accessible navigation.
-Additional layouts support this site's homepage, pages, and existing posts.
-The original monospace font, narrow layout, and red link color are retained.
+home and stylesheet links, Jekyll SEO metadata, and accessible navigation.
+The page layout is used for the 404 page. Unused sample pages, blog templates,
+and styles have been removed. The original monospace font, narrow layout, and
+red link color are retained. Theme attribution is kept here and in the license.
 
 Researcher's theme code is licensed under GPL-3.0; see
 [LICENSE-Researcher.txt](LICENSE-Researcher.txt). The theme is stored locally,
