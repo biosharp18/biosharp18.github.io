@@ -1,4 +1,4 @@
-# biosharp18's website
+# Rory Gao's website
 
 Public address: <https://biosharp18.github.io>
 
