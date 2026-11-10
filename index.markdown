@@ -16,5 +16,5 @@ Previously, I've worked at Enveda and Deep Genomics. Even more previously, I did
 1. **Efficient and Accurate Zero Shot Generation of Symmetric Protein Complexes**  
    **Rory Gao**, Yuanzhou Chen, Prajit Rajkumar, Wei Wang.  
    *40th Conference on Neural Information Processing Systems*, 2026.  
-   [Paper](https://arxiv.org/abs/2611.10424)
+   [Paper](https://arxiv.org/abs/2611.10424) · [Code](https://github.com/biosharp18/zeus)
 
